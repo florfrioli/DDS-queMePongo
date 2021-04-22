@@ -1,4 +1,0 @@
-public enum Tipo {
-  ZAPATOS, CAMISA, PANTALON, REMERA, BUZO, MEDIAS, ANTEOJOS
-}
-
