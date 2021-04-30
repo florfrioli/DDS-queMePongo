@@ -4,13 +4,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Atuendo {
-  private List<Prenda> prendas = new ArrayList<>();
+  private ArrayList<Prenda> prendas;
 
-  public Atuendo(List<Prenda> prendas) {
-    this.prendas = prendas;
+  public Atuendo() {
+    this.prendas = new ArrayList<>();
   }
 
-  public void agregarPrenda(List<Prenda> prendas) {
-    this.prendas = prendas;
+  public void agregarPrenda(Prenda prenda) {
+    this.prendas.add(prenda);
   }
 }

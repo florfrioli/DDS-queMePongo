@@ -1,5 +1,5 @@
 package dds.frba.utn.edu.ar;
 
 public enum Categoria {
-  PARTESUPERIOR, CALZADO, ACCESORIO, PARTEINFERIOR
+  PARTE_SUPERIOR, CALZADO, ACCESORIO, PARTE_INFERIOR
 }
