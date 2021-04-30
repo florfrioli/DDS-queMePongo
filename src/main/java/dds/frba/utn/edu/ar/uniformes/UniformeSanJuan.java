@@ -12,7 +12,7 @@ public class UniformeSanJuan implements ConstructorUniformes {
     public Prenda crearPrendaSuperior(){
       PrendaBorrador borrador = new PrendaBorrador(Tipo.CHOMBA);
       borrador.setTela(Trama.PIQUE);
-      borrador.setColorPrimario(Color.VERDE);
+      borrador.setColorPrimario(new Color(0,255,0));
       return borrador.crearPrenda();
     }
 
@@ -20,7 +20,7 @@ public class UniformeSanJuan implements ConstructorUniformes {
     public Prenda crearPrendaInferior() {
       PrendaBorrador borrador = new PrendaBorrador(Tipo.PANTALON);
       borrador.setTela(Trama.ACETATO);
-      borrador.setColorPrimario(Color.GRIS);
+      borrador.setColorPrimario(new Color(122,122,122));
       return borrador.crearPrenda();
     }
 
@@ -28,7 +28,7 @@ public class UniformeSanJuan implements ConstructorUniformes {
     public Prenda crearCalzado() {
       PrendaBorrador borrador = new PrendaBorrador(Tipo.ZAPATILLAS);
       borrador.setTela(null);
-      borrador.setColorPrimario(Color.BLANCO);
+      borrador.setColorPrimario(new Color(255,255,255));
       return borrador.crearPrenda();
     }
 
