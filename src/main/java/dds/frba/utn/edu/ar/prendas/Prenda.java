@@ -1,4 +1,5 @@
-package dds.frba.utn.edu.ar;
+package dds.frba.utn.edu.ar.prendas;
+import dds.frba.utn.edu.ar.caracteristicas.*;
 import dds.frba.utn.edu.ar.excepciones.PrendaInvalidaException;
 
 public class Prenda {
@@ -24,6 +25,10 @@ public class Prenda {
     if(categoria == null || tipo == null || material== null || color == null || tela == null){
       throw new PrendaInvalidaException("Los datos de la prenda están incompletos");
     }
+  }
+
+  public Categoria getCategoria() {
+    return categoria;
   }
 }
 

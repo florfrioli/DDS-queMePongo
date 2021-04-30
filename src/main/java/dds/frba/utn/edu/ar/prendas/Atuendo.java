@@ -1,7 +1,8 @@
-package dds.frba.utn.edu.ar;
+package dds.frba.utn.edu.ar.prendas;
+
+import dds.frba.utn.edu.ar.prendas.Prenda;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class Atuendo {
   private ArrayList<Prenda> prendas;
