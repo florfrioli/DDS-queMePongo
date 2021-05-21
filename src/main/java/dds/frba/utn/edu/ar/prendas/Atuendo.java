@@ -1,7 +1,5 @@
 package dds.frba.utn.edu.ar.prendas;
 
-import dds.frba.utn.edu.ar.prendas.Prenda;
-
 import java.util.ArrayList;
 
 public class Atuendo {

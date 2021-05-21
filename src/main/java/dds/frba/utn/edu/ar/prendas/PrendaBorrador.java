@@ -10,46 +10,32 @@ public class PrendaBorrador {
   private Material material;
   private Color colorPrimario;
   private Color colorSecundario;
-  private Trama tela = Trama.LISA;
+  private Integer temperaturaMaxima = 20;
 
-  public PrendaBorrador(Tipo tipo) {
-    if(tipo == null) {
-      throw new PrendaInvalidaException("No se especificó un tipo");
-    }
+  void cargarTipoPrenda(Categoria categoria, Tipo tipo) {
+    this.categoria = categoria;
     this.tipo = tipo;
-    this.categoria = tipo.getCategoria();
   }
 
-  public void setMaterial(Material material) {
-    if(material == null) {
-      throw new PrendaInvalidaException("No se especificó un material");
-    }
-    if(!this.tipo.esMaterialValido(material)) {
-      throw new PrendaInvalidaException("el material no es válido para la prenda");
-    }
+  void cargarPrenda(Material material, Color colorPrimario, Color colorSecundario) {
     this.material = material;
-  }
-
-  public void setColorPrimario(Color colorPrimario) {
-    if(colorPrimario == null) {
-      throw new PrendaInvalidaException("No se especificó un color");
-    }
     this.colorPrimario = colorPrimario;
-  }
-
-  public void setColorSecundario(Color colorSecundario) {
     this.colorSecundario = colorSecundario;
   }
 
-  public void setTela(Trama tela) {
-    if(tela == null) {
-      this.tela = Trama.LISA;
-    }
-    this.tela = tela;
+  void cargarTemperatura(Integer temperaturaMaxima){
+    this.temperaturaMaxima = temperaturaMaxima;
   }
 
   public Prenda crearPrenda() {
-    return new Prenda(this.tipo, this.categoria, this.material, this.colorPrimario, this.colorSecundario, this.tela);
+    chequearPrendaCompleta(this.categoria, this.tipo, this.material, this.colorPrimario);
+    return new Prenda(this.tipo, this.categoria, this.material, this.colorPrimario, this.colorSecundario, this.temperaturaMaxima);
+  }
+
+  private void chequearPrendaCompleta(Categoria categoria, Tipo tipo, Material material, Color color) {
+    if (categoria == null || tipo == null || material == null || color == null) {
+      throw new PrendaInvalidaException("Los datos de la prenda están incompletos");
+    }
   }
 }
 
