@@ -10,10 +10,6 @@ public class Prenda {
   private Color colorSecundario;
   private Double temperaturaMaxima;
 
-  public Tipo getTipo() {
-    return tipo;
-  }
-
   public Prenda(Tipo tipo, Categoria categoria, Material material, Color colorPrimario, Color colorSecundario, Double temperaturaMaxima) {
     this.categoria = categoria;
     this.tipo = tipo;
@@ -25,6 +21,10 @@ public class Prenda {
 
   public Categoria getCategoria() {
     return categoria;
+  }
+
+  public Tipo getTipo() {
+    return tipo;
   }
 
   public boolean esAptaPara(Double temperatura) {
