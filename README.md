@@ -11,12 +11,12 @@ Como usuarie de QuéMePongo, quiero recibir sugerencias de atuendos para vestirm
 3. Como usuarie de QuéMePongo, quiero que al generar una sugerencia las prendas sean acordes a la temperatura actual sabiendo que para cada prenda habrá una temperatura hasta la cual es adecuada. (Ej.: “Remera de mangas largas” no es apta a más de 20°C)
 4. Como administradore de QuéMePongo, quiero poder configurar fácilmente diferentes servicios de obtención del clima para ajustarme a las cambiantes condiciones económicas.
 5. Como stakeholder de QuéMePongo, quiero poder asegurar la calidad de mi aplicación sin incurrir en costos innecesarios. 
-6. Como usuarie de QuéMePongo, quiero poder guardar una prenda solamente si esta es válida.
+
 
 Además, tras investigar en el mercado encontramos que la conocida empresa AccuWeather provee un SDK para Java que nos entrega una lista con el clima de las próximas 12 horas en un diccionario.
 
 # Diagrama de clases:
-![ej](/ej QMP4.pdf)
+![Alt text](ejQMP4.png "Diagrama de clases")
 
 # Esta es una plantilla de proyecto diseñada para: 
 
