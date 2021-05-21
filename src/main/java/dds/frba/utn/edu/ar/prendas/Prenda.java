@@ -8,9 +8,13 @@ public class Prenda {
   private Material material;
   private Color colorPrimario;
   private Color colorSecundario;
-  private Integer temperaturaMaxima;
+  private Double temperaturaMaxima;
 
-  public Prenda(Tipo tipo, Categoria categoria, Material material, Color colorPrimario, Color colorSecundario, Integer temperaturaMaxima) {
+  public Tipo getTipo() {
+    return tipo;
+  }
+
+  public Prenda(Tipo tipo, Categoria categoria, Material material, Color colorPrimario, Color colorSecundario, Double temperaturaMaxima) {
     this.categoria = categoria;
     this.tipo = tipo;
     this.material = material;
@@ -23,7 +27,7 @@ public class Prenda {
     return categoria;
   }
 
-  public boolean esAptaPara(Integer temperatura) {
+  public boolean esAptaPara(Double temperatura) {
     return (temperatura<=temperaturaMaxima);
   }
 }

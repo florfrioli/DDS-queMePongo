@@ -10,7 +10,7 @@ public class PrendaBorrador {
   private Material material;
   private Color colorPrimario;
   private Color colorSecundario;
-  private Integer temperaturaMaxima = 20;
+  private Double temperaturaMaxima = 20.0;
 
   void cargarTipoPrenda(Categoria categoria, Tipo tipo) {
     this.categoria = categoria;
@@ -23,7 +23,7 @@ public class PrendaBorrador {
     this.colorSecundario = colorSecundario;
   }
 
-  void cargarTemperatura(Integer temperaturaMaxima){
+  void cargarTemperatura(Double temperaturaMaxima){
     this.temperaturaMaxima = temperaturaMaxima;
   }
 
