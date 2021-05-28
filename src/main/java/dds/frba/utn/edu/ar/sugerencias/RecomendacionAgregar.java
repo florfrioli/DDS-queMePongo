@@ -17,4 +17,9 @@ public class RecomendacionAgregar implements Recomendacion{
   public void aplicarEn(Usuario usuario) {
     usuario.agregarPrenda(prenda,guardarropa);
   }
+
+  @Override
+  public Recomendacion getRecomendacionInversa() {
+    return new RecomendacionQuitar(prenda,guardarropa);
+  }
 }

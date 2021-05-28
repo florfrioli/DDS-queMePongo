@@ -16,11 +16,11 @@ public class Guardarropa {
     return prendas;
   }
 
-  public void agregarUnaPrenda(Prenda prenda){
+  public void agregarUnaPrenda(Prenda prenda) {
     prendas.add(prenda);
   }
 
-  public void quitarUnaPrenda(Prenda prenda){
+  public void quitarUnaPrenda(Prenda prenda) {
     prendas.remove(prenda);
   }
 }

@@ -38,7 +38,7 @@ public class QueMePongo4Test {
   //Como usuarie de QuéMePongo, quiero que al generar una sugerencia las prendas sean acordes a la temperatura actual
   // sabiendo que para cada prenda habrá una temperatura hasta la cual es adecuada.
   @Test
-  public void cargarPrendasAlUsuario(){
+  public void cargarPrendasAlUsuario() {
    Usuario usuario=new Usuario("Pepe", "Buenos Aires, Argentina");
    Guardarropa guardarropa = new Guardarropa();
    usuario.agregarGuardarropa(guardarropa);
@@ -48,8 +48,9 @@ public class QueMePongo4Test {
    usuario.agregarPrenda(accesorio(),guardarropa);
    assertEquals(usuario.getPrendas().size(),4);
   }
+
   @Test
-  public void recibirSugerencia(){
+  public void recibirSugerencia() {
     Usuario usuario=new Usuario("Pepe", "Buenos Aires, Argentina");
     Guardarropa guardarropa = new Guardarropa();
     usuario.agregarGuardarropa(guardarropa);
@@ -61,19 +62,19 @@ public class QueMePongo4Test {
     assertEquals(atuendos.get(0).getPrendaSuperior().getTipo(),prendaSuperior().getTipo());
   }
 
-  Prenda prendaSuperior(){
+  Prenda prendaSuperior() {
     return new Prenda(Tipo.CHOMBA, Categoria.PARTE_SUPERIOR,new Material(Trama.LISA, Tela.ALGODON),new Color(255,255,255),null,20.0);
   }
 
-  Prenda prendaInferior(){
+  Prenda prendaInferior() {
     return new Prenda(Tipo.PANTALON, Categoria.PARTE_INFERIOR,new Material(Trama.LISA, Tela.ALGODON),new Color(255,255,255),null,20.0);
   }
 
-  Prenda calzado(){
+  Prenda calzado() {
     return new Prenda(Tipo.ZAPATOS, Categoria.CALZADO,new Material(Trama.LISA, Tela.CUERO),new Color(255,255,255),null,20.0);
   }
 
-  Prenda accesorio(){
+  Prenda accesorio() {
     return new Prenda(Tipo.ANTEOJOS_DE_SOL, Categoria.ACCESORIO, new Material(Trama.LISA, Tela.ALGODON),new Color(255,255,255),null,20.0);
   }
 }
