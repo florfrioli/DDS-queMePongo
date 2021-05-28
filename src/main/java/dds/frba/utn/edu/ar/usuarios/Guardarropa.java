@@ -5,10 +5,10 @@ import dds.frba.utn.edu.ar.prendas.Prenda;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Guardarropas {
+public class Guardarropa {
  List<Prenda> prendas;
 
-  public Guardarropas() {
+  public Guardarropa() {
     this.prendas = new ArrayList<>();
   }
 
@@ -18,5 +18,9 @@ public class Guardarropas {
 
   public void agregarUnaPrenda(Prenda prenda){
     prendas.add(prenda);
+  }
+
+  public void quitarUnaPrenda(Prenda prenda){
+    prendas.remove(prenda);
   }
 }

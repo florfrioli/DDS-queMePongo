@@ -2,33 +2,76 @@ package dds.frba.utn.edu.ar.usuarios;
 
 import dds.frba.utn.edu.ar.clima.ServicioMeteorologico;
 import dds.frba.utn.edu.ar.prendas.Prenda;
-import dds.frba.utn.edu.ar.prendas.PrendaBorrador;
-import dds.frba.utn.edu.ar.sugerencias.Sugerencia;
+import dds.frba.utn.edu.ar.sugerencias.Atuendo;
+import dds.frba.utn.edu.ar.sugerencias.Recomendacion;
+import dds.frba.utn.edu.ar.sugerencias.RecomendacionQuitar;
 import dds.frba.utn.edu.ar.sugerencias.SugerenciasClimaticas;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Usuario {
   String nombre;
-  Guardarropas guardarropas = new Guardarropas();
+  List<Guardarropa>guardarropas = new ArrayList<>();
   String ciudad;
+  List<Recomendacion> recomendaciones = new ArrayList<>();
 
   public Usuario(String nombre, String ciudad) {
     this.nombre = nombre;
     this.ciudad = (ciudad != null) ? ciudad : "Buenos Aires, Argentina";
   }
 
-  public void agregarPrenda(Prenda prenda){
-    guardarropas.agregarUnaPrenda(prenda);
+  public void agregarGuardarropa(Guardarropa guardarropa){
+    guardarropas.add(guardarropa);
   }
 
-  public List<Sugerencia> recibirSugerenciaClimatica(){
+  public void agregarPrenda(Prenda prenda, Guardarropa guardarropa) {
+    if(!guardarropas.contains(guardarropa)){
+      throw new RuntimeException("No existe el guardarropa");
+    }
+    int indice = guardarropas.indexOf(guardarropa);
+    Guardarropa guardarropaBuscado = guardarropas.get(indice);
+    guardarropaBuscado.agregarUnaPrenda(prenda);
+  }
+
+  public void quitarPrenda(Prenda prenda, Guardarropa guardarropa){
+    if(!guardarropas.contains(guardarropa)){
+      throw new RuntimeException("No existe el guardarropa");
+    }
+    int indice = guardarropas.indexOf(guardarropa);
+    Guardarropa guardarropaBuscado = guardarropas.get(indice);
+    guardarropaBuscado.quitarUnaPrenda(prenda);
+  }
+
+  public List<Atuendo> recibirSugerenciaClimatica(){
     ServicioMeteorologico servicioMeteorologico = new ServicioMeteorologico(ciudad);
     SugerenciasClimaticas sugerenciaClima = new SugerenciasClimaticas(servicioMeteorologico.temperaturaActual());
-    return sugerenciaClima.generarSugerenciasDesde(guardarropas.getPrendas());
+    return sugerenciaClima.generarSugerenciasDesde(guardarropas.get(0).getPrendas());
+  }
+
+  public void recibirRecomendacion(Recomendacion recomendacionRecibida){
+    this.recomendaciones.add(recomendacionRecibida);
+  }
+
+  private void quitarRecomendacion(Recomendacion recomendacion){
+    this.recomendaciones.remove(recomendacion);
+  }
+
+  public void aceptarRecomendacion(Recomendacion recomendacion){
+    recomendacion.aplicarEn(this);
+    this.quitarRecomendacion(recomendacion);
+  }
+
+  public void rechazarRecomendacion(Recomendacion recomendacion){
+    this.quitarRecomendacion(recomendacion);
   }
 
   public List<Prenda> getPrendas() {
-    return guardarropas.getPrendas();
+    return guardarropas.get(0).getPrendas();
+  }
+
+
+  public List<Recomendacion> getRecomendaciones() {
+    return recomendaciones;
   }
 }

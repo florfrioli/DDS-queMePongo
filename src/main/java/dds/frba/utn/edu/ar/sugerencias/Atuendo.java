@@ -4,13 +4,13 @@ import dds.frba.utn.edu.ar.caracteristicas.Categoria;
 import dds.frba.utn.edu.ar.excepciones.PrendaOtraCategoriaException;
 import dds.frba.utn.edu.ar.prendas.Prenda;
 
-public class Sugerencia {
+public class Atuendo {
   Prenda prendaSuperior;
   Prenda prendaInferior;
   Prenda calzado;
   Prenda accesorio;
 
-  public Sugerencia(Prenda prendaSuperior, Prenda prendaInferior, Prenda calzado, Prenda accesorio) {
+  public Atuendo(Prenda prendaSuperior, Prenda prendaInferior, Prenda calzado, Prenda accesorio) {
     validarCategorias(prendaSuperior, prendaInferior, calzado, accesorio);
     this.prendaSuperior = prendaSuperior;
     this.prendaInferior = prendaInferior;
