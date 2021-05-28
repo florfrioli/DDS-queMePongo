@@ -2,18 +2,17 @@
 
 _QuéMePongo es una empresa dedicada al armado de atuendos adecuados a las condiciones climáticas y preferencias de sus clientes. El servicio que provee se basa en tomar las prendas del guardarropas de une usuarie y generar diferentes combinaciones posibles que cubran las necesidades de les mismes en términos de distintos factores climáticos tales como temperatura, viento, sol, lluvia, etc. Asimismo, se busca que estos atuendos se adecuen de la mejor forma a las sensibilidades particulares respecto de dichos factores de cada usuarie y a sus gustos en el aspecto estético._
 
-## Cuarta Iteración
+## Quinta Iteración
 
-Como usuarie de QuéMePongo, quiero recibir atuendos de atuendos para vestirme ajustándome a las condiciones climáticas con ropa de mi agrado. En esta oportunidad, atacaremos solamente los siguientes requerimientos específicos:
+En esta iteración continuaremos trabajando sobre las sugerencias de atuendos:  
+Como usuarie de QuéMePongo, quiero compartir mis guardarropas con otras personas. Por ahora, comenzaremos atacando los siguientes requerimientos específicos: 
 
-1. Como usuarie de QuéMePongo, quiero poder conocer las condiciones climáticas de Buenos Aires en un momento dado para obtener atuendos acordes.
-2. Como usuarie de QuéMePongo, quiero poder recibir atuendos de atuendos que tengan una prenda para cada categoría, aunque a futuro podrán tener más (Ej.: Una remera, un pantalón, zapatos y un gorro).
-3. Como usuarie de QuéMePongo, quiero que al generar una atuendo las prendas sean acordes a la temperatura actual sabiendo que para cada prenda habrá una temperatura hasta la cual es adecuada. (Ej.: “Remera de mangas largas” no es apta a más de 20°C)
-4. Como administradore de QuéMePongo, quiero poder configurar fácilmente diferentes servicios de obtención del clima para ajustarme a las cambiantes condiciones económicas.
-5. Como stakeholder de QuéMePongo, quiero poder asegurar la calidad de mi aplicación sin incurrir en costos innecesarios. 
-
-
-Además, tras investigar en el mercado encontramos que la conocida empresa AccuWeather provee un SDK para Java que nos entrega una lista con el clima de las próximas 12 horas en un diccionario.
+1. Como usuarie de QuéMePongo, quiero poder manejar varios guardarropas para separar mis prendas según diversos criterios (ropa de viaje, ropa de entrecasa, etc). 
+2. Como usuarie de QuéMePongo, quiero poder crear guardarropas compartidos con otros usuaries (ej, ropa que comparto con mi hermane). 
+3. Como usuarie de QuéMePongo, quiero que otro usuario me proponga tentativamente agregar una prenda al guardarropas.
+4. Como usuarie de QuéMePongo, quiero que otro usuario me proponga tentativamente quitar una prenda del guardarropas.
+5. Como usuarie de QuéMePongo, necesito ver todas las propuestas de modificación (agregar o quitar prendas) del guardarropas y poder aceptarlas o rechazarlas..
+6. Como usuarie de QuéMePongo, quiero poder deshacer las propuestas de modificación que haya aceptado.
 
 # Diagrama de clases:
 ![Alt text](ejQMP5.png "Diagrama de clases")
