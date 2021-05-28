@@ -16,7 +16,7 @@ Como usuarie de QuéMePongo, quiero recibir atuendos de atuendos para vestirme a
 Además, tras investigar en el mercado encontramos que la conocida empresa AccuWeather provee un SDK para Java que nos entrega una lista con el clima de las próximas 12 horas en un diccionario.
 
 # Diagrama de clases:
-![Alt text](ejQMP4.png "Diagrama de clases")
+![Alt text](ejQMP5.png "Diagrama de clases")
 
 # Esta es una plantilla de proyecto diseñada para: 
 
